@@ -189,11 +189,13 @@ namespace TSMapEditor.UI
 
         private bool CheckGameDirectory()
         {
-            if (!File.Exists(Path.Combine(tbGameDirectory.Text, "DTA.exe")))
+            const string ExeName = "TiberianSun.exe";
+
+            if (!File.Exists(Path.Combine(tbGameDirectory.Text, ExeName)))
             {
                 EditorMessageBox.Show(WindowManager,
                     "Invalid game directory",
-                    "DTA.exe not found, please check that you typed the correct game directory.",
+                    $"{ExeName} not found, please check that you typed the correct game directory.",
                     MessageBoxButtons.OK);
 
                 return false;

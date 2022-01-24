@@ -245,7 +245,8 @@ namespace TSMapEditor.Models
             Waypoints.Add(waypoint);
             var cell = GetTile(waypoint.Position.X, waypoint.Position.Y);
             if (cell.Waypoint != null)
-                throw new InvalidOperationException("Cannot add waypoint to a cell that already has a waypoint!");
+                return;
+                // throw new InvalidOperationException("Cannot add waypoint to a cell that already has a waypoint!");
 
             cell.Waypoint = waypoint;
         }

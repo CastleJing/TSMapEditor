@@ -16,10 +16,10 @@ namespace TSMapEditor.UI.Windows.MainMenuWindows
     {
         public static void InitializeMap(WindowManager windowManager, string gameDirectory, bool createNew, string existingMapPath, string newMapTheater, Point2D newMapSize)
         {
-            IniFile rulesIni = new IniFile(Path.Combine(gameDirectory, "INI/Rules.ini"));
-            IniFile firestormIni = new IniFile(Path.Combine(gameDirectory, "INI/Enhance.ini"));
-            IniFile artIni = new IniFile(Path.Combine(gameDirectory, "INI/Art.ini"));
-            IniFile artFSIni = new IniFile(Path.Combine(gameDirectory, "INI/ArtE.INI"));
+            IniFile rulesIni = new IniFile(Path.Combine(gameDirectory, "INI/rules.ini"));
+            IniFile firestormIni = new IniFile(Path.Combine(gameDirectory, "INI/firestrm.ini"));
+            IniFile artIni = new IniFile(Path.Combine(gameDirectory, "INI/art.ini"));
+            IniFile artFSIni = new IniFile(Path.Combine(gameDirectory, "INI/artfs.INI"));
             IniFile artOverridesIni = new IniFile(Path.Combine(Environment.CurrentDirectory, "Config/ArtOverrides.ini"));
             IniFile.ConsolidateIniFiles(artFSIni, artOverridesIni);
 
